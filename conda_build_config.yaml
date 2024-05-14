@@ -1,4 +1,5 @@
 # Specify the Python versions for which the package will be built
 python:
+  - 3.10
   - 3.11
   - 3.12

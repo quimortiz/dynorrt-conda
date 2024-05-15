@@ -1,5 +1,5 @@
 {% set name = "dynorrt" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/quimortiz/dynorrt.git
-  git_rev: dev
+  git_rev: 75a875bee55f3945d230360c0cfb276f0b6e994a
 
 #
 # maybe i can put this into package!
@@ -27,12 +27,13 @@ requirements:
     - pkg-config
   host:
     - python {{python}}
-    - pinocchio
+    - pinocchio >=2.7.0
     - numpy
 
   run:
     - python {{python}}
     - {{ pin_compatible('numpy') }}
+    - pinocchio >=2.7.0
 
 test:
   commands:
@@ -46,8 +47,9 @@ about:
   summary: Fast and flexible and easy-to-use implementation of RRT and variants.
   description: |
     Fast and flexible and easy-to-use implementation of RRT and variants.
-  doc_url: https://github.com/machines-in-motion/mim_solvers
-  dev_url: https://github.com/machines-in-motion/mim_solvers
+  doc_url: https://github.com/quimortiz/dynorrt
+  dev_url: https://github.com/quimortiz/dynorrt
+
 
 extra:
   recipe-maintainers:

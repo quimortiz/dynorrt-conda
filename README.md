@@ -1,28 +1,22 @@
-This converts the cmake-based package dynorrt into a conda package
+# Dynorrt-conda
 
-The conda package is at: 
-```
-https://anaconda.org/quimortiz/dynorrt
-```
+This repository converts the package [dynorrt](https://github.com/quimortiz/dynorrt) (C++ with Python bindings, CMake-based) into a Conda [package](https://anaconda.org/quimortiz/dynorrt).
 
-Download and install the pakcage and dependencies with (conda-forge is needed for dependencies)
+## Usage
+Download and install the package and dependencies with:
 ```
-conda install quimortiz::dynorrt  -c conda-forge
+conda install quimortiz::dynorrt -c conda-forge
 ```
+Note: conda-forge is needed for dependencies.
+
+## Development
 
 Build the package with:
 ```
-conda build recipe -c conda-forge 
+conda build recipe -c conda-forge
 ```
 
-Upload the package with (I just copy the command that appears in the terminal at the end of the build process)
+Upload the package with (copy the command that appears in the terminal at the end of the build process):
 ```
 anaconda upload ...
 ```
-
-
-
-
-
-
-
